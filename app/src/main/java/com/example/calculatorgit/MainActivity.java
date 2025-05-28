@@ -88,15 +88,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return;
         }
 
-        if (buttonText.equals("⌫")) {
-            if (!dataToCalc.isEmpty()) {
+        // clear button
+        if (buttonText.equals("⌫"))
+        {
+            if (!dataToCalc.isEmpty())
+            {
                 dataToCalc = dataToCalc.substring(0, dataToCalc.length() - 1);
             }
-        } else if (buttonText.equals("x²")) {
-            if (!dataToCalc.isEmpty()) {
+        }
+        // square button
+        else if (buttonText.equals("x²"))
+        {
+            if (!dataToCalc.isEmpty())
+            {
                 dataToCalc = "Math.pow(" + dataToCalc + ",2)";
             }
-        } else if (buttonText.equals("√")) { // Handling Square Root Button
+        }
+        // Handling Square Root Button
+        else if (buttonText.equals("√")) { // Handling Square Root Button
             if (!dataToCalc.isEmpty()) {
                 dataToCalc = "Math.sqrt(" + dataToCalc + ")";
             }
